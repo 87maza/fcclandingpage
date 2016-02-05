@@ -49,6 +49,13 @@ header {
   margin: 0 auto;
   padding: 10% 0;
 }
-.space{
-  color: #000;
+.space {
+  color: green;
+}
+section {
+display:inline-block;
+
+}
+#polaroid {
+width: 20%;
 }
