@@ -1,52 +1,76 @@
-/* ---- reset ---- */
-
-body {
-  margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+element.style {
+    width: 100%;
+    height: 100%;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
 }
 
-canvas {
+body, html {
+    /*overflow: hidden;   not really needed, makes stars picture non scrollable*/
+    background: #f8f8f8;
+    font-family: 'Open Sans';
+    color: #303030;
+  font-size: 14px;
+    line-height: 1.42857;
+    margin: 0 auto;
+
+}
+div {
+    display: block;
+}
+.head{
+  background: rgba(48,48,48,.5);
+    padding: 150px 0 200px;
+    text-align: center;
+    position: relative;
+    color: black;
+    overflow: hidden;
   display: block;
-  vertical-align: bottom;
+  box-sizing: border-box;
 }
-
-/* ---- particles.js container ---- */
-
-header {
-    padding: 0;
-    margin: 0;
-/*    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    */
-   /*-webkit-align-items: center;
-   align-items: center;*/
-}
-
 #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 65%;
-  background-image: url("http://www.zastavki.com/pictures/originals/2014/Space_Constellation_gold_fish_085231_.jpg");
-  -webkit-filter: opacity(.9);
-  background-repeat: no-repeat;
-  display: flex;
-  background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  box-sizing: border-box;
+
+}
+#space{
+  position:absolute;
+  z-index:-5;
+  -webkit-filter: opacity(.7);
+  
+}
+#mar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1 {
+  font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 60px;
+    text-transform: uppercase;
+    opacity: 1;
+  margin: 0;
+    z-index: 100;
+}
+h3 {
+      font-weight: 300;
+    text-transform: uppercase;
+    opacity: 1;
+  font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
+  z-index: 100;
 }
 
-.name {
-  position: relative;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  margin-top: -20px; 
-  margin-left: 0px;
- 
-}
-.space {
-  color: green;
-}
 section {
   
 position: relative;
