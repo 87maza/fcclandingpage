@@ -9,12 +9,12 @@ audio, canvas, progress, video {
 
 body, html {
     /*overflow: hidden;   not really needed, makes stars picture non scrollable*/
-    background: #f8f8f8;
+    background: #f8f8f8;  /*changes the background to a darker white, please select something better*/
     font-family: 'Open Sans';
     color: #303030;
   font-size: 14px;
-    line-height: 1.42857;
-    margin: 0 auto;
+    line-height: 1.42857; /*increases space between text on line throughout the body*/
+    margin: 0 auto; /* must be at least 0, theres a hidden 8px if turned off*/
 
 }
 div {
@@ -50,6 +50,7 @@ div {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
 }
 h1 {
   font-weight: 700;
