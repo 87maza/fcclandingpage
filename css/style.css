@@ -1,85 +1,55 @@
-element.style {
-    width: 100%;
-    height: 100%;
-}
-audio, canvas, progress, video {
-    display: inline-block;
-    vertical-align: baseline;
-}
+/*===========================================
+General Styles
+=============================================*/
 
-body, html {
-    /*overflow: hidden;   not really needed, makes stars picture non scrollable*/
-    background: #f8f8f8;  /*changes the background to a darker white, please select something better*/
-    font-family: 'Open Sans';
-    color: #303030;
-  font-size: 14px;
-    line-height: 1.42857; /*increases space between text on line throughout the body*/
-    margin: 0 auto; /* must be at least 0, theres a hidden 8px if turned off*/
-
-}
-div {
-    display: block;
-}
-.head{
-  background: rgba(48,48,48,.5);
-    padding: 150px 0 200px;
-    text-align: center;
-    position: relative;
-    color: black;
-    overflow: hidden;
-  display: block;
-  box-sizing: border-box;
-}
-#particles-js {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-  box-sizing: border-box;
-
-}
-#space{
-  position:absolute;
-  z-index:-5;
-  -webkit-filter: opacity(.7);
-  
-}
-#mar {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-    font-family: 'Roboto', sans-serif;
-}
-h1 {
-  font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 60px;
-    text-transform: uppercase;
-    opacity: 1;
+* {
   margin: 0;
-    z-index: 100;
+  padding: 0;
+  box-sizing: border-box;
 }
-h3 {
-      font-weight: 300;
-    text-transform: uppercase;
-    opacity: 1;
-  font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: white;
-  z-index: 100;
+html {
+  background: #fff;
+  color: #555;
+  font-family: 'Lato'; 'Arial'; sans-serif;
+  font-size: 20px;
+  font-weight: 300; /*default weight*/
+  text-rendering: optimizeLegibility;
 }
 
-section {
+/*===========================================
+HEADER STYLES
+=============================================*/
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  /*width: 100%;  width doesnt do anything, is it because of the vh viewport?*/
+  height: 100vh;
+  background-image: linear-gradient(rgba(48,48,48,.2), rgba(48,48,48,.7)),url("http://www.zastavki.com/pictures/originals/2014/Space_Constellation_gold_fish_085231_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-text {
+  width: 1140px;
+  position: relative;/*vertical and horizontal centering*/
+  top: 50%; /*vertical and horizontal centering*/
+  left: 50%; /*vertical and horizontal centering*/
+  transform: translate(-50%, -50%); 
+}
+
+.header-text h1 {
+  margin-top: 0; /*normalize.css adds some margin*/
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%; /*relative to the html global fontsize which is at 20px*/
+  font-weight: 300; /*for big font sizes use smaller font weight*/
   
-position: relative;
-
-display: flex;
-justify-content: center;
-align-items: center;
+  text-align: center;
 }
-#polaroid {
-width: 20%;
+
+.header-text span {
+  font-weight: 300;
+  text-transform: uppercase;
 }
