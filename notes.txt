@@ -1,0 +1,9 @@
+portfolio issues:
+
+HR STYLING
+Add fading from the bottom
+Choose either parallax or scroll through
+
+
+add this
+      <p id="intro">Hi, my name's Martin, welcome to my portfolio. I enjoy making things come to life through programming.  Below are my credentials and labors of love.  Coding.Logistics.Gym.Eat.Movies.Music.Books.Travel.Repeat.  Let me know how I can help you. </p>
