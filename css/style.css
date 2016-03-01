@@ -16,6 +16,23 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.row {
+  max-width: 1140px; /*this is the only value that is absolute and in px*/
+  margin: 0 auto; /*all our rows will be centered*/
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
 /*===========================================
 HEADER STYLES
 =============================================*/
@@ -25,7 +42,7 @@ HEADER STYLES
   position: absolute;
   /*width: 100%;  width doesnt do anything, is it because of the vh viewport?*/
   height: 100vh;
-  background-image: linear-gradient(rgba(48,48,48,.2), rgba(48,48,48,.7)),url("http://www.zastavki.com/pictures/originals/2014/Space_Constellation_gold_fish_085231_.jpg");
+  background-image: linear-gradient(to bottom, rgba(48,48,48,.2) 0%, rgba(48,48,48,2.7) 100%),url("http://www.zastavki.com/pictures/originals/2014/Space_Constellation_gold_fish_085231_.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -34,22 +51,95 @@ HEADER STYLES
 .header-text {
   width: 1140px;
   position: relative;/*vertical and horizontal centering*/
-  top: 50%; /*vertical and horizontal centering*/
+  top: 35%; /*vertical and horizontal centering*/
   left: 50%; /*vertical and horizontal centering*/
   transform: translate(-50%, -50%); 
 }
 
-.header-text h1 {
+h1, h2 {
   margin-top: 0; /*normalize.css adds some margin*/
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #fff;
   font-size: 240%; /*relative to the html global fontsize which is at 20px*/
   font-weight: 300; /*for big font sizes use smaller font weight*/
-  
   text-align: center;
+
+}
+h1 {
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 175%;
+  font-weight: 150;
+  letter-spacing: .5px;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  font-weight: 300; /*for big font sizes use smaller font weight*/
+  text-transform: uppercase;
 }
 
-.header-text span {
-  font-weight: 300;
+
+.header-text h1:after {
+  /*pseudo class adds yellow line between h2 and the immediate paragraph*/
+  display: block; 
+  height: 3.5px; /*thicker hr line*/
+  opacity: 1;
+  background-color: #c8bcac;
+  content: " "; /* add space but no other characters*/
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 15px; /*margin between h2 after and the actual h2, then 30px up and down*/
+}
+
+/*===========================================
+Nav-bar
+=============================================*/
+
+.main-nav{
+  float: right;
+  list-style: none;
+  margin-top: 40px;
+}
+.main-nav li{
+  display: inline-block; /*li is originally block elements*/
+  margin-left: 40px;
+
+}
+.main-nav li a:link,
+.main-nav li a:visited{ 
+  /*link at the visited/current stays stays the same*/
+  padding: 8px 0; /*adding padding between the text and border bottom*/
+  color: #fff;
+  text-decoration: none;  /*no underline*/
   text-transform: uppercase;
+  font-size: 90%; /*default font size is 20px on the html selector, 18/20 = 90%*/
+  border-bottom: 2px solid transparent; /*border set to transparent until you hover*/
+  transition: border-bottom 0.2s;
+}
+.main-nav li a:active,
+.main-nav li a:hover {
+  border-bottom: 2px solid #c8bcac; /*orange color on highlight of nav buttons*/
+}
+
+/*===========================================
+ABOUT ME SECTION
+=============================================*/
+
+/*----------------PARAGRAPHS------------------*/
+.long-copy{
+  line-height: 145%;
+  width: 70%;  /*paragraph will no longer be centered after adjusting the width*/
+  margin-left: 15%; /*15% because the total width is 100% the remaining percent should be distributed between left and right*/
+  margin-right: 15%;
+  text-align: center;
+  /*margin-bottom: 30px;   already have a section for this*/ 
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
 }
