@@ -21,12 +21,17 @@ html {
   margin: 0 auto; /*all our rows will be centered*/
 }
 
+.clearfix {
+  /*clearfix clear the float after the element, the parent has the clearfix class*/
+  zoom: 1;
+}
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 canvas {
   display: block;
@@ -39,7 +44,7 @@ HEADER STYLES
 /* ---- particles.js container ---- */
 
 #particles-js {
-  position: absolute;
+  position: relative;
   /*width: 100%;  width doesnt do anything, is it because of the vh viewport?*/
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(48,48,48,.2) 0%, rgba(48,48,48,2.7) 100%),url("http://www.zastavki.com/pictures/originals/2014/Space_Constellation_gold_fish_085231_.jpg");
@@ -49,12 +54,15 @@ HEADER STYLES
 }
 
 .header-text {
-  width: 1140px;
-  position: relative;/*vertical and horizontal centering*/
-  top: 35%; /*vertical and horizontal centering*/
-  left: 50%; /*vertical and horizontal centering*/
+  left:50%;
+  top:50%;
   transform: translate(-50%, -50%); 
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  position:absolute;
+  z-index: 2;
 }
+
 
 h1, h2 {
   margin-top: 0; /*normalize.css adds some margin*/
@@ -103,11 +111,20 @@ Nav-bar
   float: right;
   list-style: none;
   margin-top: 40px;
+  left:25%;
+/*  top:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+  position:absolute;
+  z-index: 2;
 }
 .main-nav li{
   display: inline-block; /*li is originally block elements*/
   margin-left: 40px;
-
+}
+.main-nav li:first-child {
+  margin-left: 0;
 }
 .main-nav li a:link,
 .main-nav li a:visited{ 
