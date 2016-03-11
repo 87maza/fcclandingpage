@@ -41,10 +41,26 @@ canvas {
 /*----------------ICONS------------------*/
 .icon-big {
   /*you can style the ionicons like fonts*/
-  font-size: 350%;
-  display: block;
+  font-size: 225%;
+  display: inline-block;
+  color: #e67e22;
+  margin-bottom: 8px;
+}
+
+.icon-small {
+  font-size: 185%;
+  display: inline-block;
   color: #e67e22;
   margin-bottom: 10px;
+}
+#js {
+ color: #000; 
+}
+#data {
+ color: #ffdb4d; 
+}
+#node {
+  color: #7FFF00;
 }
 
 /*===========================================
@@ -172,28 +188,29 @@ ABOUT ME SECTION
   line-height: 145%;
 }
 
+
 /*===========================================
 Photo ROW
 =============================================*/
 
-.meals-showcase{
+.image-showcase{
   list-style: none;
   width: 100%;
 }
 
-.meals-showcase li {
+.image-showcase li {
   /*display images as block and float*/
   display: block;
   float: left;/* side by side image*/
   width: 25%; /*4 x 25 is 100% of the width*/
 }
 
-.meal-photo{
+.image-row{
   width: 100%; /*has exact with of parent (meal showcase li or 25%)*/
   margin: 0; /*normalize file has added some margin*/
   overflow: hidden;/*chilrden inside this div that extend out, those excess will be hidden*/
 }
-.meal-photo img{
+.image-row img{
   opacity: 0.7; /*makes images darker, adds a haze/fade*/
   width: 100%;
   height: auto;
@@ -201,7 +218,7 @@ Photo ROW
   transition: transform 0.5s, opacity 0.5s;
   background: #000; /*since image is opaque with a black background, image gets darker*/
 }
-.meal-photo img:hover{
+.image-row img:hover{
   opacity:1; /*picture gets lighter on hover*/
   transform: scale(1.03); /*white line on top images, will be reduced*/
   /*zoom out effect */
