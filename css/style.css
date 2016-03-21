@@ -76,6 +76,7 @@ HEADER STYLES
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  background-attachment: fixed;
 }
 
 .header-text {
@@ -222,4 +223,14 @@ Photo ROW
   opacity:1; /*picture gets lighter on hover*/
   transform: scale(1.03); /*white line on top images, will be reduced*/
   /*zoom out effect */
+}
+
+.tagline-container {
+  margin: 0 auto;
+}
+
+#tagline {
+
+  display: inline-block;
+  color: black;
 }
