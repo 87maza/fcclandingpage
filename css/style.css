@@ -234,3 +234,71 @@ Photo ROW
   display: inline-block;
   color: black;
 }
+
+
+/*===========================================
+FOOTER
+=============================================*/
+
+footer {
+  background-color: #333;
+
+  font-size: 80%;
+}
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+.social-links {
+  list-style: none;
+  float: right; 
+}
+.footer-nav p,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav p,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.4s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+.ion-email,
+.ion-social-github,
+.ion-social-youtube,
+.ion-social-twitter {
+  transition: color 0.4s;
+} 
+
+.ion-email:hover {
+  color: #3b5998;
+}.ion-social-github:hover {
+  color: #fff;
+}.ion-social-youtube:hover {
+  color: #bb0000;
+}.ion-social-instagram:hover {
+  color: #125688;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+footer p {
+  color: white;
+  margin-top: 5px;
+}
