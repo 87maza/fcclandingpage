@@ -110,6 +110,7 @@ h2 {
   font-weight: 150;
   letter-spacing: .5px;
 }
+
 .tagline {
 
   font-size: 165%;
@@ -170,34 +171,17 @@ Nav-bar
 }
 
 
-
-/*===========================================
-ABOUT ME SECTION
-=============================================*/
-
-/*----------------PARAGRAPHS------------------*/
-.long-copy{
-  line-height: 145%;
-  width: 70%;  /*paragraph will no longer be centered after adjusting the width*/
-  margin-left: 15%; /*15% because the total width is 100% the remaining percent should be distributed between left and right*/
-  margin-right: 15%;
-  text-align: center;
-  /*margin-bottom: 30px;   already have a section for this*/ 
-}
-
-.box p {
-  font-size: 90%;
-  line-height: 145%;
-}
-
-
 /*===========================================
 Photo ROW
 =============================================*/
 
+
+
 .image-showcase{
   list-style: none;
   width: 100%;
+  display: inline-block;
+
 }
 
 .image-showcase li {
@@ -229,14 +213,48 @@ Photo ROW
 .tagline-container {
   margin: 0 auto;
 }
+h2#tagline {
+  margin: 0 auto;
+  font-size: 67%;
+}
 
 #tagline {
 
   display: inline-block;
   color: black;
 }
+#tagline-div {
+  position: relative;
+  z-index: 999;
+  margin-top: -13%;
+  width: 42%;
+  border: 2px solid black;
+  margin-left: 29.5%;
+  font-size: 240%;
+}
 
+/*===========================================
+ABOUT ME SECTION
+=============================================*/
 
+.skills-intro{
+  margin-top: 100px;
+}
+
+/*----------------PARAGRAPHS------------------*/
+.long-copy{
+  line-height: 145%;
+  width: 70%;  /*paragraph will no longer be centered after adjusting the width*/
+  margin-left: 15%; /*15% because the total width is 100% the remaining percent should be distributed between left and right*/
+  margin-right: 15%;
+  text-align: center;
+  /*margin-bottom: 30px;   already have a section for this*/ 
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
 
 /*===========================================
 PORTFOLIO TABS
@@ -247,6 +265,12 @@ article p {
   margin: 0 0 20px;
   line-height: 1.5;
 }
+.clip-desc p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+
 
 main {
   font: 14px/1 'Open Sans', sans-serif;
@@ -257,6 +281,9 @@ main {
   padding: 50px;
   margin: 0 auto;
   background: #fff;
+}
+.project{
+  display: flex;
 }
 
 article {
@@ -302,7 +329,7 @@ input:checked + label {
   border-bottom: 1px solid #fff;
 }
 
-#tab1:checked ~ #content1,
+#tab1:checked ~ #front-end,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
 #tab4:checked ~ #content4 {
@@ -395,6 +422,41 @@ footer p {
   margin-top: 5px;
 }
 
+@media(max-width: 1000px){
 
+
+  .main-nav li{
+    display: block; /*li is originally block elements*/
+    margin-left: 20px;
+  
+
+  }
+  .main-nav li:first-child {
+    margin-left: 60px;
+  }
+
+}
+
+@media(max-width: 767px){
+
+
+  .main-nav{
+    float: none;
+    list-style: none;
+    margin: 1% 25%;
+    
+    z-index: 2;
+
+  }
+  .main-nav li{
+    display: block; /*li is originally block elements*/
+    margin-left: 60px;
+    text-align: center;
+
+  }
+  .main-nav li:first-child {
+    margin-left: 60px;
+  }
+}
 
 
