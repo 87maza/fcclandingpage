@@ -170,6 +170,14 @@ Nav-bar
   border-bottom: 2px solid #c8bcac; /*orange color on highlight of nav buttons*/
 }
 
+/*===========================================
+GITHUB API STRIP
+=============================================*/
+.github-strip{
+  background-image: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff),linear-gradient(70deg, #e0f1ff 32%, #fffae3);
+  height: 200px;
+  display: flex;
+}
 
 /*===========================================
 Photo ROW
@@ -216,6 +224,7 @@ Photo ROW
 h2#tagline {
   margin: 0 auto;
   font-size: 67%;
+  padding-left: 5%;
 }
 
 #tagline {
@@ -232,6 +241,8 @@ h2#tagline {
   margin-left: 29.5%;
   font-size: 240%;
 }
+
+
 
 /*===========================================
 ABOUT ME SECTION
